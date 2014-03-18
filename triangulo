@@ -1,0 +1,27 @@
+// Ejercicios.cpp : Defines the entry point for the console application.
+// Autor: Hugo Ortiz
+// Fecha: 18/3/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+int main ()
+{
+ float a,b,c,s,area;
+ cout << "ingrese lado1: ";
+ cin >> a;
+ cout << "ingrese lado2: ";
+ cin >> b;
+ cout << "ingrese lado3: ";
+ cin >> c;
+ s=(a+b+c)/2;
+ area= sqrt((a+b+c)/2);
+ cout << area;
+
+
+	getch();
+	
+}
