@@ -1,0 +1,36 @@
+// Ejercicios.cpp : Defines the entry point for the console application.
+// Autor: Hugo Ortiz
+// Fecha: 18/3/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main ()
+{
+	int a,b,c;
+cout <<"ingrese a: ";
+cin  >> a;
+cout <<"ingrese b: ";
+cin  >> b;
+cout <<"ingrese c: ";
+cin  >> c;
+if(a>b)
+	if(a>c)
+		cout<< "El mayor es"<<a;
+	else
+		cout<< "El mayor es"<<c;
+else
+	if(b>c)
+	cout<< "El mayor es"<<b;
+	else
+	cout<< "El mayor es"<<c;
+	
+
+ 
+
+	getch();
+	
+}
