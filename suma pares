@@ -1,0 +1,23 @@
+// Ejercicio en Clase.cpp : Defines the entry point for the console application.
+// Autor: Hugo Ortiz
+// Fecha: 25/3/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main ()
+{
+int num1,num2,res;
+cout<<"ingresar numero 1 ";
+cin>>num1;
+cout<<"ingresar numero 2 ";
+cin>>num2;
+if (num1%2==0&&num2%2==0)
+    res = num1+num2;
+else res = num1*num2;
+cout<<"El resultado es ";
+cout<<res;
+getch();
+}
