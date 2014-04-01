@@ -1,0 +1,21 @@
+// Secuencia de numeros naturales.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+int main()
+{
+int suma,i,N;
+cout << "ingresar el valor de N:";
+cin >> N;
+suma=0;
+for (i=1; i<N;i=i+2 )
+	suma=suma+i;
+cout<<"la Suma de los "<< N <<"primeros numeros impares naturales es:" << suma;
+getch();
+return 0;
+}
