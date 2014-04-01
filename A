@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+int main()
+{
+int suma,N;
+float i;
+cout << "ingresar el valor de N:";
+cin >> N;
+suma=0;
+for (i=1; i<=N;i++ )
+{
+	suma = suma + pow(i,2);
+	cout << i << "**2   + ";
+}
+
+	
+cout<<"la Suma de los "<< N <<"primeros numeros impares naturales es:" << suma;
+getch();
+return 0;
+}
