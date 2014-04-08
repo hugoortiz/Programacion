@@ -1,0 +1,61 @@
+// hugo.cpp : Defines the entry point for the console application.
+// autor: Hugo Ortiz
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+
+{
+	float p1,p2,p3,practica,final,NF;
+
+	do
+	{
+	cout<<"Introduzca el parcial 1";
+	cin>>p1;
+	}
+	while((p1>100 || p1<0)&&(p1!=-99));
+	while(p1!=-99)
+	{
+	do
+	{
+	cout<<"Introduzca el parcial2";
+	cin>>p2;
+	}
+	while(p2>100 || p2<0);
+	{
+	do
+	{
+	cout<<"Introduzca el parcial3";
+	cin>>p3;
+	}
+	while (p3>100 || p3<0);
+
+	do
+	{
+	cout<<"Introduzca practica";
+	cin>>practica;
+	}
+	while (practica >100 || practica <0);
+
+	do
+	{
+	cout<<"Introduzca final";
+	cin>>final;
+	}
+	while(final>100 || final<0);
+	NF=(((p1+p2+p3)/3)*0.4)+practica*0.2+final*0.4;
+	cout<<"nota final= "<<NF;
+	do
+	{
+	cout<<"Ingrese parcial 1";
+	cin>>p1;
+	}
+	while ((p1>100||p1<0)&&(p1!=-99));
+
+
+getch();
+}
