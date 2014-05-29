@@ -1,0 +1,52 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void leer (int vector[],int tam);
+void escribir (int vector[],int tam);
+void ordenar (int vector[],int tam);
+void main()
+
+{
+	int V[100],tam;
+	do
+	{ 
+		cout<<"ingrese el numero de elementos:";
+		cin>>tam;
+
+	}
+	while ((tam>100)||(tam<=0));
+		leer (V,tam);
+	    ordenar (V,tam);
+		escribir (V,tam);
+		getch();
+}
+
+
+
+void leer (int vector[],int tam)
+	{
+		for(int i=0; i<tam;i++)
+			cin>>vector[i];
+	}
+
+void escribir (int vector[],int tam)
+{
+	for(int i=0;i<tam;i++)
+		cout<<vector[i]<<" ";
+}
+
+void ordenar (int vector[],int tam)
+{ 
+	int aux;
+	for(int i=0;i<tam-1;i++)
+		for(int k=i;k<tam;k++)
+		if(vector[i]>vector[k])
+		{
+			aux=vector[i];
+			vector[i]=vector[k];
+			vector[k]=aux;
+		} 
+}
