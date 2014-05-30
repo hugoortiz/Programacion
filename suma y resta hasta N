@@ -1,0 +1,23 @@
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+int main()
+{
+    int N,suma;
+    cout<<"Introduzca el valor de N:   ";
+    cin>>N;
+    suma=1;
+    for(int i=2;i<=N;i++)
+    {
+    if(i%2==0)
+    suma=suma-i;
+    else
+    suma=suma+i;
+    }
+    cout<<"La suma es: ";
+    cout<<suma;
+    getch();
+    return 0;
+}
