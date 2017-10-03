@@ -1,0 +1,113 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <string>
+#define MAX 100
+using namespace std;
+
+struct tdomicilio{
+	int nro_identificacion;
+	float consumo_agua;
+	int frequencia_de_quejas;
+	string direccion;
+	int UV;
+	int MZA;
+	int nro_habitantes;
+	string satisfaccion;
+};
+
+tdomicilio casa[MAX];
+int N;
+
+void insertar();
+void listar();
+void consultar();
+void modificar();
+void borrar();
+void clasificar_datos();
+
+
+
+void main()
+{
+	
+	int opc;
+	do{
+		cout <<" MENU " << endl;
+		cout << "[1] --> Insertar"<< endl;
+		cout << "[2] --> Listar"<< endl;
+		cout << "[3] --> Consultar"<< endl;
+		cout << "[4] --> Modificar"<<endl;
+		cout << "[5] --> Borrar"<<endl;
+		cout << "[6] --> Clasificar los datos" << endl;
+		cout << "[0] --> Salir
+		cout << "ingrese su opcion: ";
+		cin >> opc;
+
+	
+	switch(opc){
+	case 1: {
+				insertar();
+				break;
+			}
+	case 2: {	
+				listar();
+				break;
+			}
+	case 3: {}	
+	case 4: {}
+	case 5: {}
+	case 6: {}
+	case 0: {}
+	default: cout <<"Error";
+	}
+	}while(opc!=0);
+	
+	getch();
+}
+
+
+void insertar(){
+	int cont=1,i,n;
+	cout << "Ingrese el numero de domicilios a los cuales desea insertar datos: " ;
+	cin >> n;
+	N = n;
+	for(i=0;i<n;i++){
+		
+		casa[i].nro_identificacion = cont;
+		cout << "Consumo de agua en (m3): " ;
+		cin >> casa[i].consumo_agua;
+		cout << endl;
+		cout << "Frequencia de quejas: " ;
+		cin >> casa[i].frequencia_de_quejas;
+		cout << endl;
+		cout << "Direccion : " ; 
+		cin.ignore();
+		getline(cin,casa[i].direccion);
+		cout << endl;
+		cout << "UV: " ;
+		cin >> casa[i].UV;
+		cout << endl;
+		cout << "MZA: ";
+		cin >> casa[i].MZA;
+		cout << endl;
+		cout<< "Nro de habitantes: ";
+		cin >> casa[i].nro_habitantes;
+		cin.ignore();
+		cout << endl;
+		cout << "Satisfaccion del servicio" ;
+		getline(cin,casa[i].satisfaccion);
+		cont++;
+	}
+
+}
+void listar(){
+	int i;
+	cout << "\t\t\t Listado" << endl;
+	cout << "ID \t\t consumo \t\t quejas \t\t direccion \t\t UV \t MZA \t Habitantes  Satisfaccion " <<endl;
+	for(i=0;i<N;i++){
+		cout << casa[i].nro_identificacion << "\t\t" << casa[i].frequencia_de_quejas << "\t\t" << casa[i].direccion << "\t\t"<< casa[i].UV	
+	
+	}
+
+}
